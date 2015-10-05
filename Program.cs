@@ -10,7 +10,7 @@ namespace ConsoleApplication1 {
             Name = name;
         }
         virtual public string AnimalType { get; private set; }
-		virtual public string Talk{ get; private set; }
+        virtual public string Talk{ get; private set; }
         public string Name { get; private set; }
 
     }
@@ -24,15 +24,14 @@ namespace ConsoleApplication1 {
                 return "dog";
             }
         }
-		public override string Talk {
-			get {
-				return "汪汪";
-			}
-		}
+        public override string Talk {
+            get {
+                return "汪汪";
+            }
+        }
     }
 
-    class Cat : Animal
-    {
+    class Cat : Animal {
         public Cat(string name):base(name) {
 
         }
@@ -41,11 +40,11 @@ namespace ConsoleApplication1 {
                 return "cat";
             }
         }
-		public override string Talk {
-			get {
-				return "喵喵";
-			}
-		}
+        public override string Talk {
+            get {
+                return "喵喵";
+            }
+        }
     }
 
     class Program {
@@ -57,7 +56,7 @@ namespace ConsoleApplication1 {
             };
 
             foreach (var animal in animals) {
-				Console.WriteLine(animal.Name + animal.Talk);
+                Console.WriteLine(animal.Name + animal.Talk);
             }
         }
     }
