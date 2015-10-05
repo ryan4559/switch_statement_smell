@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication1
-{
+namespace ConsoleApplication1 {
     class Animal {
-        public Animal(string name)
-        {
+        public Animal(string name) {
             Name = name;
         }
         virtual public string AnimalType { get; private set; }
@@ -16,14 +14,11 @@ namespace ConsoleApplication1
     }
 
     class Dog : Animal {
-        public Dog(string name):base(name)
-        {
+        public Dog(string name):base(name) {
 
         }
-        public override string AnimalType
-        {
-            get
-            {
+        public override string AnimalType {
+            get {
                 return "dog";
             }
         }
@@ -31,37 +26,29 @@ namespace ConsoleApplication1
 
     class Cat : Animal
     {
-        public Cat(string name):base(name)
-        {
+        public Cat(string name):base(name) {
 
         }
-        public override string AnimalType
-        {
-            get
-            {
+        public override string AnimalType {
+            get {
                 return "cat";
             }
         }
     }
 
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            List<Animal> animals = new List<Animal>()
-            {
+    class Program {
+        static void Main(string[] args) {
+            List<Animal> animals = new List<Animal>() {
                 new Dog("dog1"),
                 new Dog("dog2"),
                 new Cat("cat1")
             };
 
-            foreach (var animal in animals)
-            {
-                if (animal.AnimalType == "dog")
-                {
+            foreach (var animal in animals) {
+                if (animal.AnimalType == "dog") {
                     Console.WriteLine(animal.Name + "汪汪");
-                } else if (animal.AnimalType == "cat")
-                {
+                }
+				else if (animal.AnimalType == "cat") {
                     Console.WriteLine(animal.Name + "喵喵");
                 }
             }
